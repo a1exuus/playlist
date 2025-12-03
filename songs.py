@@ -58,7 +58,7 @@ def get_song(song_id, headers):
     download_image_or_lyrics(lyrics_file_path, lyrics, False)
 
 
-if __name__ == '__main__':
+def main():
     env = Env()
     env.read_env()
 
@@ -70,3 +70,7 @@ if __name__ == '__main__':
 
     headers = {'Authorization': f'Bearer {env('API_KEY')}'}
     get_song(args.song_id, headers)
+
+
+if __name__ == '__main__':
+    main()

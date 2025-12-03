@@ -27,7 +27,7 @@ def get_songs_list(artist_id, headers):
     return response
 
 
-if __name__ == '__main__':
+def main():
     env = Env()
     env.read_env()
 
@@ -39,3 +39,7 @@ if __name__ == '__main__':
 
     headers = {'Authorization': f'Bearer {env('API_KEY')}'}
     get_songs_list(args.author_id, headers)
+
+
+if __name__ == '__main__':
+    main()

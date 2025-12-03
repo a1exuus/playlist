@@ -13,7 +13,7 @@ def search(request, headers):
         get_song(song['result']['id'], headers)
 
 
-if __name__ == '__main__':
+def main():
     env = Env()
     env.read_env()
 
@@ -25,3 +25,7 @@ if __name__ == '__main__':
 
     headers = {'Authorization': f'Bearer {env('API_KEY')}'}
     search(args.request, headers)
+
+
+if __name__ == '__main__':
+    main()
